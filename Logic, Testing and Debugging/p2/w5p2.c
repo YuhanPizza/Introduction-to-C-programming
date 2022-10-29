@@ -1,0 +1,518 @@
+/*
+*****************************************************************************
+                          Workshop - #5 (P2)
+Full Name  :Lorenz Alvin Tubo
+Student ID#:109934224
+Email      :lorenzalvintubo@gmail.com or ltubo@myseneca.ca
+Section    :IPC144NKK
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+*/
+
+#define _CRT_SECURE_NO_WARNINGS
+#define MIN_YEAR 2012
+#define MAX_YEAR 2022
+#define LOG_DAYS 3
+
+#include <stdio.h>
+
+int main(void)
+{
+    const int JAN = 1, DEC = 12;
+    int nYear, nMonth = 0, nDays = 1, i;
+    double morningRate[LOG_DAYS], eveningRate[LOG_DAYS], eveningTotal, morningTotal;
+    int done = 0;
+
+    printf("General Well-being Log\n");
+    printf("======================");
+    do
+    {
+        printf("\nSet the year and month for the well-being log (YYYY MM): ");
+        scanf(" %d%d", &nYear, &nMonth);
+        if (nYear >= MIN_YEAR && nYear <= MAX_YEAR)
+        {
+            if (nMonth >= JAN && nMonth <= DEC)
+            {
+                if (nMonth == 1)
+                {
+
+                   printf("\n*** Log date set! ***\n");
+                    for (i = 0; i < LOG_DAYS; i++)
+                    {
+                        printf("\n%d-JAN-0%d\n", nYear, nDays);
+                        do
+                        {
+                            printf("   Morning rating (0.0-5.0): ");
+                            scanf(" %lf", &morningRate[i]);
+                            if (morningRate[i] >= 0 && morningRate[i] <= 5)
+                            {
+                                do
+                                {
+                                    printf("   Evening rating (0.0-5.0): ");
+                                    scanf(" %lf", &eveningRate[i]);
+                                    if (eveningRate[i] >= 0 && eveningRate[i] <= 5)
+                                    {
+
+                                        nDays = nDays + 1;
+                                        morningTotal += morningRate[i];
+                                        eveningTotal += eveningRate[i];
+                                    }
+                                    else if (eveningRate[i] > 5 || eveningRate[i] < 0)
+                                    {
+                                        printf("      ERROR: Rating must be between 0.0 and 5.0 inclusive!\n");
+                                    }
+                                } while (eveningRate[i] > 5 || eveningRate[i] < 0);
+                            }
+                            else if (morningRate[i] < 5 || morningRate[i] > 0)
+                            {
+                                printf("      ERROR: Rating must be between 0.0 and 5.0 inclusive!\n");
+                            }
+                        } while (morningRate[i] > 5 || morningRate[i] < 0 || eveningRate[i] > 5 || eveningRate[i] < 0);
+                    }
+                    done = 1;
+                }
+                else if (nMonth == 2)
+                {
+                   printf("\n*** Log date set! ***\n");
+                    for (i = 0; i < LOG_DAYS; i++)
+                    {
+                        printf("\n%d-FEB-0%d\n", nYear, nDays);
+                        do
+                        {
+                            printf("   Morning rating (0.0-5.0): ");
+                            scanf(" %lf", &morningRate[i]);
+                            if (morningRate[i] >= 0 && morningRate[i] <= 5)
+                            {
+                                do
+                                {
+                                    printf("   Evening rating (0.0-5.0): ");
+                                    scanf(" %lf", &eveningRate[i]);
+                                    if (eveningRate[i] >= 0 && eveningRate[i] <= 5)
+                                    {
+
+                                        nDays = nDays + 1;
+                                        morningTotal += morningRate[i];
+                                        eveningTotal += eveningRate[i];
+                                    }
+                                    else if (eveningRate[i] > 5 || eveningRate[i] < 0)
+                                    {
+                                        printf("      ERROR: Rating must be between 0.0 and 5.0 inclusive!\n");
+                                    }
+                                } while (eveningRate[i] > 5 || eveningRate[i] < 0);
+                            }
+                            else if (morningRate[i] < 5 || morningRate[i] > 0)
+                            {
+                                printf("      ERROR: Rating must be between 0.0 and 5.0 inclusive!\n");
+                            }
+                        } while (morningRate[i] > 5 || morningRate[i] < 0 || eveningRate[i] > 5 || eveningRate[i] < 0);
+                    }
+                    done = 1;
+                }
+                else if (nMonth == 3)
+                {
+                   printf("\n*** Log date set! ***\n");
+                    for (i = 0; i < LOG_DAYS; i++)
+                    {
+                        printf("\n%d-MAR-0%d\n", nYear, nDays);
+                        do
+                        {
+                            printf("   Morning rating (0.0-5.0): ");
+                            scanf(" %lf", &morningRate[i]);
+                            if (morningRate[i] >= 0 && morningRate[i] <= 5)
+                            {
+                                do
+                                {
+                                    printf("   Evening rating (0.0-5.0): ");
+                                    scanf(" %lf", &eveningRate[i]);
+                                    if (eveningRate[i] >= 0 && eveningRate[i] <= 5)
+                                    {
+
+                                        nDays = nDays + 1;
+                                        morningTotal += morningRate[i];
+                                        eveningTotal += eveningRate[i];
+                                    }
+                                    else if (eveningRate[i] > 5 || eveningRate[i] < 0)
+                                    {
+                                        printf("      ERROR: Rating must be between 0.0 and 5.0 inclusive!\n");
+                                    }
+                                } while (eveningRate[i] > 5 || eveningRate[i] < 0);
+                            }
+                            else if (morningRate[i] < 5 || morningRate[i] > 0)
+                            {
+                                printf("      ERROR: Rating must be between 0.0 and 5.0 inclusive!\n");
+                            }
+                        } while (morningRate[i] > 5 || morningRate[i] < 0 || eveningRate[i] > 5 || eveningRate[i] < 0);
+                    }
+                    done = 1;
+                }
+                else if (nMonth == 4)
+                {
+                   printf("\n*** Log date set! ***\n");
+                    for (i = 0; i < LOG_DAYS; i++)
+                    {
+                        printf("\n%d-APR-0%d\n", nYear, nDays);
+                        do
+                        {
+                            printf("   Morning rating (0.0-5.0): ");
+                            scanf(" %lf", &morningRate[i]);
+                            if (morningRate[i] >= 0 && morningRate[i] <= 5)
+                            {
+                                do
+                                {
+                                    printf("   Evening rating (0.0-5.0): ");
+                                    scanf(" %lf", &eveningRate[i]);
+                                    if (eveningRate[i] >= 0 && eveningRate[i] <= 5)
+                                    {
+
+                                        nDays = nDays + 1;
+                                        morningTotal += morningRate[i];
+                                        eveningTotal += eveningRate[i];
+                                    }
+                                    else if (eveningRate[i] > 5 || eveningRate[i] < 0)
+                                    {
+                                        printf("      ERROR: Rating must be between 0.0 and 5.0 inclusive!\n");
+                                    }
+                                } while (eveningRate[i] > 5 || eveningRate[i] < 0);
+                            }
+                            else if (morningRate[i] < 5 || morningRate[i] > 0)
+                            {
+                                printf("      ERROR: Rating must be between 0.0 and 5.0 inclusive!\n");
+                            }
+                        } while (morningRate[i] > 5 || morningRate[i] < 0 || eveningRate[i] > 5 || eveningRate[i] < 0);
+                    }
+                    done = 1;
+                }
+                else if (nMonth == 5)
+                {
+                   printf("\n*** Log date set! ***\n");
+                    for (i = 0; i < LOG_DAYS; i++)
+                    {
+                        printf("\n%d-MAY-0%d\n", nYear, nDays);
+                        do
+                        {
+                            printf("   Morning rating (0.0-5.0): ");
+                            scanf(" %lf", &morningRate[i]);
+                            if (morningRate[i] >= 0 && morningRate[i] <= 5)
+                            {
+                                do
+                                {
+                                    printf("   Evening rating (0.0-5.0): ");
+                                    scanf(" %lf", &eveningRate[i]);
+                                    if (eveningRate[i] >= 0 && eveningRate[i] <= 5)
+                                    {
+
+                                        nDays = nDays + 1;
+                                        morningTotal += morningRate[i];
+                                        eveningTotal += eveningRate[i];
+                                    }
+                                    else if (eveningRate[i] > 5 || eveningRate[i] < 0)
+                                    {
+                                        printf("      ERROR: Rating must be between 0.0 and 5.0 inclusive!\n");
+                                    }
+                                } while (eveningRate[i] > 5 || eveningRate[i] < 0);
+                            }
+                            else if (morningRate[i] < 5 || morningRate[i] > 0)
+                            {
+                                printf("      ERROR: Rating must be between 0.0 and 5.0 inclusive!\n");
+                            }
+                        } while (morningRate[i] > 5 || morningRate[i] < 0 || eveningRate[i] > 5 || eveningRate[i] < 0);
+                    }
+                    done = 1;
+                }
+                else if (nMonth == 6)
+                {
+                   printf("\n*** Log date set! ***\n");
+                    for (i = 0; i < LOG_DAYS; i++)
+                    {
+                        printf("\n%d-JUN-0%d\n", nYear, nDays);
+                        do
+                        {
+                            printf("   Morning rating (0.0-5.0): ");
+                            scanf(" %lf", &morningRate[i]);
+                            if (morningRate[i] >= 0 && morningRate[i] <= 5)
+                            {
+                                do
+                                {
+                                    printf("   Evening rating (0.0-5.0): ");
+                                    scanf(" %lf", &eveningRate[i]);
+                                    if (eveningRate[i] >= 0 && eveningRate[i] <= 5)
+                                    {
+
+                                        nDays = nDays + 1;
+                                        morningTotal += morningRate[i];
+                                        eveningTotal += eveningRate[i];
+                                    }
+                                    else if (eveningRate[i] > 5 || eveningRate[i] < 0)
+                                    {
+                                        printf("      ERROR: Rating must be between 0.0 and 5.0 inclusive!\n");
+                                    }
+                                } while (eveningRate[i] > 5 || eveningRate[i] < 0);
+                            }
+                            else if (morningRate[i] < 5 || morningRate[i] > 0)
+                            {
+                                printf("      ERROR: Rating must be between 0.0 and 5.0 inclusive!\n");
+                            }
+                        } while (morningRate[i] > 5 || morningRate[i] < 0 || eveningRate[i] > 5 || eveningRate[i] < 0);
+                    }
+                    done = 1;
+                }
+                else if (nMonth == 7)
+                {
+                    printf("\n*** Log date set! ***\n");
+                    for (i = 0; i < LOG_DAYS; i++)
+                    {
+                        printf("\n%d-JUL-0%d\n", nYear, nDays);
+                        do
+                        {
+                            printf("   Morning rating (0.0-5.0): ");
+                            scanf(" %lf", &morningRate[i]);
+                            if (morningRate[i] >= 0 && morningRate[i] <= 5)
+                            {
+                                do
+                                {
+                                    printf("   Evening rating (0.0-5.0): ");
+                                    scanf(" %lf", &eveningRate[i]);
+                                    if (eveningRate[i] >= 0 && eveningRate[i] <= 5)
+                                    {
+
+                                        nDays = nDays + 1;
+                                        morningTotal += morningRate[i];
+                                        eveningTotal += eveningRate[i];
+                                    }
+                                    else if (eveningRate[i] > 5 || eveningRate[i] < 0)
+                                    {
+                                        printf("      ERROR: Rating must be between 0.0 and 5.0 inclusive!\n");
+                                    }
+                                } while (eveningRate[i] > 5 || eveningRate[i] < 0);
+                            }
+                            else if (morningRate[i] < 5 || morningRate[i] > 0)
+                            {
+                                printf("      ERROR: Rating must be between 0.0 and 5.0 inclusive!\n");
+                            }
+                        } while (morningRate[i] > 5 || morningRate[i] < 0 || eveningRate[i] > 5 || eveningRate[i] < 0);
+                    }
+                    done = 1;
+                }
+                else if (nMonth == 8)
+                {
+                    printf("\n*** Log date set! ***\n");
+                    for (i = 0; i < LOG_DAYS; i++)
+                    {
+                        printf("\n%d-AUG-0%d\n", nYear, nDays);
+                        do
+                        {
+                            printf("   Morning rating (0.0-5.0): ");
+                            scanf(" %lf", &morningRate[i]);
+                            if (morningRate[i] >= 0 && morningRate[i] <= 5)
+                            {
+                                do
+                                {
+                                    printf("   Evening rating (0.0-5.0): ");
+                                    scanf(" %lf", &eveningRate[i]);
+                                    if (eveningRate[i] >= 0 && eveningRate[i] <= 5)
+                                    {
+
+                                        nDays = nDays + 1;
+                                        morningTotal += morningRate[i];
+                                        eveningTotal += eveningRate[i];
+                                    }
+                                    else if (eveningRate[i] > 5 || eveningRate[i] < 0)
+                                    {
+                                        printf("      ERROR: Rating must be between 0.0 and 5.0 inclusive!\n");
+                                    }
+                                } while (eveningRate[i] > 5 || eveningRate[i] < 0);
+                            }
+                            else if (morningRate[i] < 5 || morningRate[i] > 0)
+                            {
+                                printf("      ERROR: Rating must be between 0.0 and 5.0 inclusive!\n");
+                            }
+                        } while (morningRate[i] > 5 || morningRate[i] < 0 || eveningRate[i] > 5 || eveningRate[i] < 0);
+                    }
+                    done = 1;
+                }
+                else if (nMonth == 9)
+                {
+                    printf("\n*** Log date set! ***\n");
+                    for (i = 0; i < LOG_DAYS; i++)
+                    {
+                        printf("\n%d-SEP-0%d\n", nYear, nDays);
+                        do
+                        {
+                            printf("   Morning rating (0.0-5.0): ");
+                            scanf(" %lf", &morningRate[i]);
+                            if (morningRate[i] >= 0 && morningRate[i] <= 5)
+                            {
+                                do
+                                {
+                                    printf("   Evening rating (0.0-5.0): ");
+                                    scanf(" %lf", &eveningRate[i]);
+                                    if (eveningRate[i] >= 0 && eveningRate[i] <= 5)
+                                    {
+
+                                        nDays = nDays + 1;
+                                        morningTotal += morningRate[i];
+                                        eveningTotal += eveningRate[i];
+                                    }
+                                    else if (eveningRate[i] > 5 || eveningRate[i] < 0)
+                                    {
+                                        printf("      ERROR: Rating must be between 0.0 and 5.0 inclusive!\n");
+                                    }
+                                } while (eveningRate[i] > 5 || eveningRate[i] < 0);
+                            }
+                            else if (morningRate[i] < 5 || morningRate[i] > 0)
+                            {
+                                printf("      ERROR: Rating must be between 0.0 and 5.0 inclusive!\n");
+                            }
+                        } while (morningRate[i] > 5 || morningRate[i] < 0 || eveningRate[i] > 5 || eveningRate[i] < 0);
+                    }
+                    done = 1;
+                }
+                else if (nMonth == 10)
+                {
+                    printf("\n*** Log date set! ***\n");
+                    for (i = 0; i < LOG_DAYS; i++)
+                    {
+                        printf("\n%d-OCT-0%d\n", nYear, nDays);
+                        do
+                        {
+                            printf("   Morning rating (0.0-5.0): ");
+                            scanf(" %lf", &morningRate[i]);
+                            if (morningRate[i] >= 0 && morningRate[i] <= 5)
+                            {
+                                do
+                                {
+                                    printf("   Evening rating (0.0-5.0): ");
+                                    scanf(" %lf", &eveningRate[i]);
+                                    if (eveningRate[i] >= 0 && eveningRate[i] <= 5)
+                                    {
+
+                                        nDays = nDays + 1;
+                                        morningTotal += morningRate[i];
+                                        eveningTotal += eveningRate[i];
+                                    }
+                                    else if (eveningRate[i] > 5 || eveningRate[i] < 0)
+                                    {
+                                        printf("      ERROR: Rating must be between 0.0 and 5.0 inclusive!\n");
+                                    }
+                                } while (eveningRate[i] > 5 || eveningRate[i] < 0);
+                            }
+                            else if (morningRate[i] < 5 || morningRate[i] > 0)
+                            {
+                                printf("      ERROR: Rating must be between 0.0 and 5.0 inclusive!\n");
+                            }
+                        } while (morningRate[i] > 5 || morningRate[i] < 0 || eveningRate[i] > 5 || eveningRate[i] < 0);
+                    }
+                    done = 1;
+                }
+                else if (nMonth == 11)
+                {
+                    printf("\n*** Log date set! ***\n");
+                    for (i = 0; i < LOG_DAYS; i++)
+                    {
+                        printf("\n%d-NOV-0%d\n", nYear, nDays);
+                        do
+                        {
+                            printf("   Morning rating (0.0-5.0): ");
+                            scanf(" %lf", &morningRate[i]);
+                            if (morningRate[i] >= 0 && morningRate[i] <= 5)
+                            {
+                                do
+                                {
+                                    printf("   Evening rating (0.0-5.0): ");
+                                    scanf(" %lf", &eveningRate[i]);
+                                    if (eveningRate[i] >= 0 && eveningRate[i] <= 5)
+                                    {
+
+                                        nDays = nDays + 1;
+                                        morningTotal += morningRate[i];
+                                        eveningTotal += eveningRate[i];
+                                    }
+                                    else if (eveningRate[i] > 5 || eveningRate[i] < 0)
+                                    {
+                                        printf("      ERROR: Rating must be between 0.0 and 5.0 inclusive!\n");
+                                    }
+                                } while (eveningRate[i] > 5 || eveningRate[i] < 0);
+                            }
+                            else if (morningRate[i] < 5 || morningRate[i] > 0)
+                            {
+                                printf("      ERROR: Rating must be between 0.0 and 5.0 inclusive!\n");
+                            }
+                        } while (morningRate[i] > 5 || morningRate[i] < 0 || eveningRate[i] > 5 || eveningRate[i] < 0);
+                    }
+                    done = 1;
+                }
+                else if (nMonth == 12)
+                {
+                    printf("\n*** Log date set! ***\n");
+                    for (i = 0; i < LOG_DAYS; i++)
+                    {
+                        printf("\n%d-DEC-0%d\n", nYear, nDays);
+                        do
+                        {
+                            printf("   Morning rating (0.0-5.0): ");
+                            scanf(" %lf", &morningRate[i]);
+                            if (morningRate[i] >= 0 && morningRate[i] <= 5)
+                            {
+                                do
+                                {
+                                    printf("   Evening rating (0.0-5.0): ");
+                                    scanf(" %lf", &eveningRate[i]);
+                                    if (eveningRate[i] >= 0 && eveningRate[i] <= 5)
+                                    {
+
+                                        nDays = nDays + 1;
+                                        morningTotal += morningRate[i];
+                                        eveningTotal += eveningRate[i];
+                                    }
+                                    else if (eveningRate[i] > 5 || eveningRate[i] < 0)
+                                    {
+                                        printf("      ERROR: Rating must be between 0.0 and 5.0 inclusive!\n");
+                                    }
+                                } while (eveningRate[i] > 5 || eveningRate[i] < 0);
+                            }
+                            else if (morningRate[i] < 5 || morningRate[i] > 0)
+                            {
+                                printf("      ERROR: Rating must be between 0.0 and 5.0 inclusive!\n");
+                            }
+                        } while (morningRate[i] > 5 || morningRate[i] < 0 || eveningRate[i] > 5 || eveningRate[i] < 0);
+                    }
+                    done = 1;
+                }
+            }
+            else if (nMonth > 12 || nMonth < 1)
+            {
+                printf("   ERROR: Jan.(1) - Dec.(12)");
+            }
+        }
+        else if ((nYear < MIN_YEAR && nYear > 0) || nYear > MAX_YEAR)
+        {
+            printf("   ERROR: The year must be between 2012 and 2022 inclusive");
+            if (nMonth < JAN || nMonth > DEC)
+            {
+                printf("\n   ERROR: Jan.(1) - Dec.(12)");
+            }
+        }
+        else if (nYear == 0 && nMonth == 0)
+        {
+            done = 1;
+        }
+
+    } while (done != 1);
+printf("\nSummary\n");
+printf("=======\n");
+printf("Morning total rating: %2.3lf\n", morningTotal);
+printf("Evening total rating:  %2.3lf\n", eveningTotal);
+printf("----------------------------\n");
+printf("Overall total rating: %2.3lf\n", morningTotal + eveningTotal);
+printf("\nAverage morning rating:  %2.1lf\n", morningTotal / LOG_DAYS);
+printf("Average evening rating:  %2.1lf\n", eveningTotal / LOG_DAYS);
+printf("----------------------------\n");
+printf("Average overall rating:  %2.1lf\n", (((eveningTotal/LOG_DAYS) + (morningTotal/LOG_DAYS))/2)+0.05);
+
+
+    return 0;
+}

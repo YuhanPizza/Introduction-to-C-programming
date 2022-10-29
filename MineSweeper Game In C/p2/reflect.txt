@@ -1,0 +1,61 @@
+*****************************************************************************
+                               Reflection
+                             Workshop - #7
+Full Name  : Lorenz Alvin Tubo
+Student ID#: 109934224
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+
+Q1.
+It is so that you can increase productivity , it elminates lots of burdens when 
+dealing with records which contain different types of data items. for example
+you can store an integer, character, and a double. inside one structure. these 
+different data items can also be an array and you can easily call them using the
+structure name. you can also create a multiple versions of the same structure 
+for example if you were to create a structure 
+struct GameInfo{
+        int maxMoves;
+        int pathLength;
+        int bombs[MAXLENGTH];
+        int treasure[MAXLENGTH];
+        char major[MAXLENGTH];
+        int minor[MAXLENGTH];
+    };
+you can create multiple versions of this structure by just giving it a name with the 
+structure tag. for example i can create more structures which has the same items inside 
+as the structure tag. like struct GameInfo game, struct GameInfo game1. thus creating 
+2 structures with the same item types as GameInfo (structure tag). So. game1 and game 
+has the same data types inside it but their data types can contain different values.
+for example. game1.maxMoves = 10 while game.maxMoves = 5, they may both contain integers named
+maxMoves but the values that their different integers contain may be different also we can 
+store different values within them.
+
+Q2. we can create a new structure struct GameHistory which contains data types that required to be 
+saved. and we can create conditions which only accepts the highier score for example 
+struct GameHistory{
+	char playerSymbol;
+	int MaxScore;
+	int pathLength;
+	int maxLives;
+}
+struct GameHistory history;
+// this logic will check at the end of the game if the current player has surpassed the previous highscore.
+if (history.MaxScore > game.counterTreasures){
+	history.playerSymbol = game.playerName;
+	history.MaxScore = game.counterTreasures;
+}
+ // The history.playerSymbol will store the name of 
+the player symbol of the player who has beaten the top score and their end score.
+you can use a printf function to display the current high score.
+
+Q3. I think the hardest part of this Workshop was the logic behind taking a different number of inputs
+based on the game multiplier and path length. Also the logic that would be necessary to replace characters based on 
+the value of i.
+
+I just had to follow the code and check my logic debugging it multiple times. Because trial end error is 
+necessary to achive the results that you are aiming for. 
+	

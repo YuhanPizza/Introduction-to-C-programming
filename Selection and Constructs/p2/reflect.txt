@@ -1,0 +1,116 @@
+*****************************************************************************
+                               Reflection
+                             Workshop - #4
+Full Name  : Lorenz Alvin Tubo
+Student ID#: 109934224
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+
+1. Because it gives the user a choice, and depending on that choice of input
+the result will be different.
+a.) if (applesPicked <= 0)
+        {
+            printf("ERROR: You must pick at least 1!\n");
+        }
+in this iteration if the user has inputed a number which is less than or equal to zero
+then the program will output the printf("ERROR: You must pick at least 1!\n");
+
+b.) if(applesPicked >= 1 && applesPicked <= apples )
+        {
+            Totalapples = Totalapples + applesPicked;
+            if(Totalapples != apples)
+            {
+            printf("Looks like we still need some APPLES...\n");
+            }
+in this iteration if the user has input a number which is more than 1 and less than or equal
+the total number of apples he needs. the program will add the number of apples he inputed
+towards the total number of apples he has. in continuation if the total number of apples 
+he has is not equal to the number of apples he needs then the program will issue the following 
+printf statement printf("Looks like we still need some APPLES...\n");
+
+c.)if (apples == Totalapples && apples > 0)
+    {
+        printf("Great, that's the apples done!\n\n");
+    }
+in this command the program checks if the number of apples he needs is equal to the total apple
+he has and if the number of apples he needs is more than 0 then the program will issue the 
+printf statement printf("Great, that's the apples done!\n\n");
+
+2.
+a.)do
+    {
+        printf("Pick some APPLES... how many did you pick? :  ");
+        scanf("%d", &applesPicked);
+      
+        if (applesPicked <= 0)
+        {
+            printf("ERROR: You must pick at least 1!\n");
+        }
+        else if(applesPicked > apples )
+        {
+            printf("You picked too many... only %d more APPLE(S) are needed.\n", apples - Totalapples);
+        }
+        if(applesPicked >= 1 && applesPicked < apples )
+        {
+            Totalapples = Totalapples + applesPicked;
+            if(Totalapples != apples)
+            {
+            printf("Looks like we still need some APPLES...\n");
+            }
+            
+        }
+        applesPicked = 0;
+        
+
+    } while (Totalapples != apples );
+the program then undergoes checkpoints the first checkpoint is if the apples picked is less than or equal to 0 and if its true
+then the program will out put a statement saying ERROR: You must pick at least 1!.
+whether the checkpoint 1 is true or not the program then checks the 2nd check point which checks
+if the apples the user picked is more than the apples he needs if it is true the program
+will then input a statement saying You picked too many... only %d more APPLE(S) are needed.
+inputing the apples needed on the "%d" whether checkpoint 1 and checkpoint 2 are true or false
+the program will then undergo a 3rd check point stating that are the apples the user input
+more than or equalt to 1? and is the number of apples the user has input is less than the number 
+of apples he needs? if the program checks and sees this conditions to be true then he 
+adds the user input apples to the total number of apples the user has. the program then runs a checkpoint
+inside the 3rd check point if the total number of apples is not equal to the number of apples needed
+if this condition is true then it will output the statement Looks like we still need some APPLES...
+
+after doing all these checkpoints wether one is true or none is true or all is true it will
+set the variable of the userinput applesPicked back to 0; and this will keep repeating until
+the while condition Totalapples!=apples is True.
+
+b.)do
+    {
+     printf("How many CABBAGES do you need? : ");
+     scanf("%d", &cabbages);
+     if (cabbages <= -1)
+     {
+     printf("ERROR: Value must be 0 or more.\n");
+     }
+     }while (cabbages <= -1);
+in this nested construct the program will keep repeating the output ERROR: Value must be 0 or more.
+until the conditions on the while (cabbages <=-1); is deemed false. depending on the user input
+for cabbages.
+
+3.do
+    {
+     printf("How many CABBAGES do you need? : ");
+     scanf("%d", &cabbages);
+     if (cabbages <= -1)
+     {
+     printf("ERROR: Value must be 0 or more.\n");
+     }
+     }while (cabbages <= -1);
+
+I believe Do-While is my favorite itteration construct because it seems to be the simplest one
+considering it takes all your input before checking it. and it makes it easier for read compared
+to the For construct which checks the inputed variables before doing the loop. and the while loop
+who does the loop atleast once before doing it but it checks the variables at the beginning 
+of the loop. considering what is required for this workshop i believe the Do-While loop is 
+the easiest iteration construct for me to use in order to do what is required in the workshop.
+ 

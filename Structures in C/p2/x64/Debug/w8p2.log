@@ -1,0 +1,4 @@
+﻿  w8p2.c
+C:\Users\loren\OneDrive\Desktop\Workshops\IPC-Workshops-master\WS08\p2\w8p2.c(157,8): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\loren\OneDrive\Desktop\Workshops\IPC-Workshops-master\WS08\p2\w8p2.c(159,9): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+  w8p2.vcxproj -> C:\Users\loren\OneDrive\Desktop\Workshops\IPC-Workshops-master\WS08\p2\x64\Debug\w8p2.exe

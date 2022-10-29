@@ -1,0 +1,75 @@
+/*
+*****************************************************************************
+                        Assignment 1 - Milestone 3
+Full Name  :Lorenz Alvin Tubo
+Student ID#:109934224
+Email      :ltubo@myseneca.ca
+Section    :IPC144NKK
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+*/
+
+Q1. 
+// Index for Lowest Date and Time
+int getIndexForLowestDateTime(struct Appointment*, int);
+This function accepts an address of a struct Appointment and an int max 
+appointments. This functions have multiple loops to check each variable 
+of the struct Appointment appointments array.It checks if it is the 
+lowest year, lowest month, lowest day, lowest hour and lowest min. and if it is,
+It stores the value of that struct in the provided int valriables. lowestYear,
+lowestMonth,lowestDay,lowestHour,lowestMin; It does it in a loop so 
+that it can check very variable in the appointments struct array. 
+
+// Sort Appointments
+void sortAppointments(struct Appointment* , int);
+This function also accepts a struct and an int that represents all 
+the data recieved in the importAppointments function. This function sorts 
+the functions given from lowest to highiest calling in the function 
+getIndexForLowestDateTime in a loop calling it multiple times till all the 
+appointments have been sorted.
+
+// Check for Available appointments
+int availAppoint(struct Appointment*, int);
+This function receives appointment and maxappointments.The purpose of this function
+is to check if there are available slots for appointments to be made and then checks 
+if there is a slot and returns that slots index, else it returns a -1 representing that
+there was no more space for more appointments.
+
+All three of this functions are important soo that the data variables will be sorted 
+in accordance to the required output.
+
+Q2.
+void addAppointment(struct Appointment*, int,struct Patient*, int);
+This function has over 88 lines of code. It saved me around 30 lines of code, this function
+was created to address the display/input of the day based on the year (leap check) and the 
+months with specific days. These logic/conditions were identified in 2 functions, when displaying 
+filtered data and when adding a new appointment. By placing this function in its own module and
+then run pass these 2 functions, the readability of the code was improved along with the lines saves.
+availAppoint function was also called inside this function saving lines of code, checking if there
+was more space to add into the appointments.
+
+By using this approach when writing code it allows locating problems and debug more local by correct 
+them within its own function, without compromising the whole code. The changes to these modules 
+will be applied to all the code, meaning that in terms of scalability, these functions can and will
+be used multiple times for new features and in case these functions need an update or even when replacing,
+this processes will be carried out in a more efficient manner. Coding this functions must be carried 
+out with extreme finess and attention to detail, since they could cause errors, bugs or crashes in the 
+whole program.
+
+Q3.
+Time Management is essential to any project/activity, by properly allocating time you become more efficient
+overall. Considering that we have deadlines not only on this subject but other subjects aswell, Also having 
+proficient amount of time to relax and unwind also prevents you from burnout. Mindfulness is also a great way 
+of being efficient and being able to discern if you are under a lot of stress.Mindfulness is helpful in the moment of
+learning and also in more future-focused skills. By maintaining a calmer view of the present, students
+are able to improve their study habits, planning, andorganizational skills through mindfulness. Speaking of 
+I usually spent my week attending class and using 1 hr of my break inbetween classes to focus and have a head start
+of deadlines for that class. Although when I have a day off or a lot of free time i spend 2 hrs working on my class
+deadlines in rotation with a proper alotted time to relax to avoid burnout. So I can start my Project with a lot 
+more focus. Whenever I get stuck on something I tend to pull out my notes while listening to the lecture. So I can pin 
+point which part of the lesson plan I need to focus on to understand the concept in the class that I need to learn more
+about to be able to solve my doubts. Overall I have learned alot from this Assignment.

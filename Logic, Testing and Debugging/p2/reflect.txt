@@ -1,0 +1,50 @@
+*****************************************************************************
+                               Reflection
+                             Workshop - #5
+Full Name  : Lorenz Alvin Tubo
+Student ID#: 109934224
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+
+1. If and Switch
+IF SELECTION CONSTRUCT
+if (nMonth == 11)
+{
+   printf("*** Log date set! ***\n");
+   printf("\n%d-NOV-0%d\n", nYear, nDays);
+}
+if else (nMonth == 12)
+{
+   printf("*** Log date set! ***\n");
+   printf("\n%d-DEC-0%d\n", nYear, nDays);
+}
+SWITCH SELECTION CONSTRUCT
+switch (nMonth)
+{
+case 11:
+    printf("\n*** Log date set! ***\n\nLog starting date: %d-NOV-0%d\n", nYear, nDays);
+    break;
+case 12:
+    printf("\n*** Log date set! ***\n\nLog starting date: %d-DEC-0%d\n", nYear, nDays);
+    break;
+}
+2. for, while and, do-while
+for loop.because this loop executes is code while the condition is true. It sets up the default value, 
+condition and increments the variable used per rotation/repetition and checks again. 
+for(i=0; i < LOG_DAYS; i++), thus it is easy to control how many times it goes around the loop.
+
+3. Syntactic Error = for this type of error it usually does not let you run your program
+it gives you an error message and gives you the location of the error. First i read the error
+message and try to understand it best as i could. try to fix the error and recompile until 
+it matches my desired output.
+
+Semantic Error = for this error the program does not give me an error message and it will still 
+compile, during these types of errors the program does not give you the desired output. In order
+to fix these errors. every statement in the program must be checked. In order to check the program
+I must issue break points on where i think the error is and then slowly monitor every step over 
+while checking the values of variables on the program or checking the conditions/logic of the
+program.
